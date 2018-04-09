@@ -1,0 +1,43 @@
+.left-colum {
+    width: 35%;
+    display: block;
+}
+
+.right-colum {
+    width: 35%;
+    display:block;
+}
+
+.mindle-column {
+    width: 30%;
+    display: block;
+}
+.col {
+    margin-right: 1%;
+    float: left;
+}
+
+.row {
+    width: 100%;
+    max-width: 2000px;
+    min-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.title{
+    background-color: antiquewhite;
+}
+
+
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table tr:nth-child(odd) {   /* odd 奇数*/
+    background-color: #8d5d4d;
+  }
+  table tr:nth-child(even) {  /* even 偶数 */
+    background-color: #ffffff;
+  }
