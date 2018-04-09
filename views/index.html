@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>This is myapp</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+</head>
+<body ng-app="myApp">
+    <h1>Hello World!</h1>
+
+<form name="myForm" ng-controller="myCtrl">
+    Email: 
+    <input type="email" name="myAddress" ng-model="myText" re>
+    <span ng-show="myForm.myAddress.$error.email">不合法邮箱地址</span>
+    <p>编辑邮箱地址，查看状态的改变。</p>
+    <h3>状态</h3>
+</form>
+
+<div>
+        <div runoob-directive></div>
+</div>
+
+<script>
+    var app1 = angular.module("myApp1", []);
+    app1.directive("runoobDirective", function() {
+    return {
+        template : "<h1>贾益铭！</h1>"
+        };
+});
+    var app2 = angular.module("myApp2", []);
+    app2.controller("myCtrl", function($scope){
+        $scope.myText = "test@runoob.com";
+    });
+    angular.module("myApp", ['myApp1', 'myApp2']);
+    </script>
+</body>
+</html>
