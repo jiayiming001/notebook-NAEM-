@@ -70,7 +70,13 @@
             <div ng-controller="myCtrl2">
                 First Name: <input type="text" ng-model="firstName"><br>
                 Last Name: <input type="text" ng-model="lastName">
-                <br>
+                <br>  <style>
+      
+                        #vaildin.ng-valid{
+                            background-color:lightskyblue; 
+                        }
+                        
+                    </style>
                 Full Name: {{firstName + " " + lastName}}
             </div>
 
@@ -94,9 +100,10 @@
             </div>  
             <div ng-controller="myCtrl8">
                 <table>
-                    <tr ng-repeat="x in names">
+                    <tr style="{{$even?'background-color: #546846':''}}" ng-repeat="x in names | orderBy : 'Country'">
+                        <td>{{ $index + 1 }}</td>
                         <td>{{x.Name}}</td>
-                        <td>{{x.Country}}</td>
+                        <td>{{x.Country | uppercase}}</td>
                     </tr>
                 </table>
             </div>

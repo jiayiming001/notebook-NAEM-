@@ -11,7 +11,11 @@ app.use('/static', express.static('public'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(multer()); // for parsing multipart/form-data
+
+
+
 app.use("/", require("./routes/index"));
+app.use("/next",require("./routes/next"));
 
 app.set("port", process.env.port || 3000);
 

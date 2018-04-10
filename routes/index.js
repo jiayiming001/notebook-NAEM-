@@ -59,5 +59,11 @@ router.get("/json2", function(req, res, next){
         ]};
     res.json(data);
 })
+
+router.get("/db", function(req, res, next){
+    const db = require("monk")("localhost:27017/jiayi");
+    const col = db.get("user");
+    res
+});
     
 module.exports = router;
