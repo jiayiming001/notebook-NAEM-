@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
         <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/static/stylesheets/base.css">
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>
     </head>
     <body ng-app="myApp">
         <div class="row">
@@ -30,6 +31,7 @@
                         名:<input type="text" ng-model="firstname">
                     </p>
                 </div>
+                
             </div>
 
             <div class="col mindle-column">
@@ -46,10 +48,10 @@
                     <p>master={{master}}</p>
                 </div>
             <div ng-controller="myCtrl5">
-                    <h3>Users</h3>
+                <h3>Users</h3>
                     <table class="table table-striped">
                         <thead>
-                            <tr>
+                            <tr><script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
                                 <td> 编辑 </td>
                                 <td>名</td>
                                 <td>姓</td>
@@ -106,9 +108,10 @@
                         <span ng-show="edit">添加</span>
                         <span ng-hide="edit">修改</span>
                     </button>
-                    </div>
-            </div>
-
+                 </div>
+                </div>           
+           
+           
             <div class="col right-colum">
                 
                     <form>
@@ -143,8 +146,9 @@
                             <input type="submit" ng-disabled="myform.muser.$dirty && myform.muser.$invalid ||
                             myform.memail.$dirty && myform.memail.$invalid">
                         </form>
-                    </div>
-                
+                    </div>  
+                    <h1>隐藏 DIV:<input type="checkbox" ng-model="mycheck"></h1>
+                    <div class="dong" ng-hide="mycheck"></div>
             </div>
 
         </div>

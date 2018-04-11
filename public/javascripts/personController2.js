@@ -1,4 +1,4 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ['ngAnimate']);
 app.controller("myCtrl1", function($scope){
     $scope.count = 0;
     $scope.myvar = false;
